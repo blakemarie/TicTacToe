@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Tic Tac Toe</title>
+
+    <!-- Linking Bootstrap CSS from node_modules -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <!-- Linking CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font: Bubblegum Sans, used for font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-primary"> <!-- Set background color to primary color (blue) using Bootstrap -->
+
+    <!-- Header section with a title in the center -->
+    <div id="header" class="container text-center p-3">
+        <h1 class="bubbly-text">Tic-Tac-Toe</h1> <!-- Game title styled with the 'Bubblegum Sans' font -->
+    </div>
+
+    <!-- Section displaying the player information -->
+    <div class="p-0">
+        <!-- Player 1 -->
+        <h3 id="p1" class="text-center text-white p-5">Player 1 (X)</h3>
+
+        <!-- Player 2 -->
+        <h3 id="p2" class="text-center text-white">Player 2 (O)</h3>
+    </div>
+
+    <!-- Alerts -->
+    <div id="alert--container">
+        <!-- Alert for indicating whose turn it is to start the game -->
+        <div id="alertStart" class="alert alert-info text-center m-0 ms-5 me-5 fs-3" role="alert">
+            Player 1 Start!
+        </div>
+
+        <!-- Alert that will display the winner's name -->
+        <div id="alertWinner" class="alert alert-info text-center m-0 ms-5 me-5 fs-3" role="alert"></div>
+
+        <!-- Alert for when the game ends in a draw -->
+        <div id="alertDraw" class="alert alert-info text-center m-0 ms-5 me-5 fs-3" role="alert">
+            GAME OVER! It's a DRAW!
+        </div>
+    </div>
+
+    <!-- Main game grid for Tic-Tac-Toe -->
+    <div class="container m-auto g-5"> 
+       <div id="grid" class="container-outline-white m-auto p-0 bg-dark text-info text-center align-middle border border-info">
+          <!-- Row 1 with three boxes for the top row -->
+          <div class="row fs-1 g-0">
+            <div id="box0" class="box col p-3 border border-info"></div>
+            <div id="box1" class="box col p-3 border border-info"></div>
+            <div id="box2" class="box col p-3 border border-info"></div>
+          </div>
+
+          <!-- Row 2 with three boxes for the middle row -->
+          <div class="row fs-1 g-0">
+            <div id="box3" class="box col p-3 border border-info"></div>
+            <div id="box4" class="box col p-3 border border-info"></div>
+            <div id="box5" class="box col p-3 border border-info"></div>
+          </div>
+
+          <!-- Row 3 with three boxes for the bottom row -->
+          <div class="row fs-1 g-0">
+            <div id="box6" class="box col p-3 border border-info"></div>
+            <div id="box7" class="box col p-3 border border-info"></div>
+            <div id="box8" class="box col p-3 border border-info"></div>
+          </div>
+       </div>
+    </div>
+
+    <!-- Button section with Start and Reset -->
+    <div class="d-grid col-2 gap-3 mx-auto pt-4"> <!-- Buttons are centrally aligned -->
+        <!-- Button to start the game -->
+        <button id="startBtn" type="button" class="btn btn-outline-info btn-lg">Start</button>
+        
+        <!-- Button to reset the game and reload the page -->
+        <button id="resetBtn" type="button" class="btn btn-outline-info btn-lg">Reset</button>
+    </div>      
+
+    <!-- Bootstrap JS  -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- jQuery library from node_modules for easier DOM manipulation -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <!-- Custom JS file that contains the game logic -->
+    <script src="index.js"></script>
+
+</body>
+</html>
